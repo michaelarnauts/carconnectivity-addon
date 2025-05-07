@@ -77,7 +77,6 @@
                 {{- if  gt (len .connector_abrp_tokens) 0 }}
                     {
                         "type": "abrp",
-                        "disabled": true,
                         "config": {
                             "tokens": {
                                 {{- $first := true }}
