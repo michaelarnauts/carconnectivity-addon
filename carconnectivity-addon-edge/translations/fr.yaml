@@ -70,6 +70,10 @@ configuration:
     name: "Mot de passe WebUI"
     description: "Mot de passe  pour l'accès à Carconnectivity WebUI"
 
+  connector_abrp_tokens:
+    name: "Liste des tokens ABRP"
+    description: "Pour récupérer votre jeton, accédez à votre véhicule sur A Better Routeplanner, sélectionnez « Live Data », puis reliez votre véhicule à l'aide de la section « Generic ». Le jeton à coller dans la configuration s'affichera. Vous devez configurer une correspondance entre le VIN et le jeton pour chaque véhicule que vous souhaitez connecter à ABRP. Consultez la documentation de l'addon pour connaître la syntaxe."
+
   api_log_level:
     name: "Niveau de journalisation pour les api"
     description: "Sélectionnez le niveau de journalisation souhaité (info, warning, error, debug)."

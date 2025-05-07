@@ -114,7 +114,22 @@ Definer mengden informasjon registrert i logger:
 -   `Error`: Viser bare feilmeldinger.
 -   `Debug`: Viser ytterligere detaljer som er nyttige for feilsøking.
 
-### 7. Ekspertmodus
+### 7. `ABRP - A Better Routeplanner`
+
+For hvert kjøretøy du ønsker å koble til ABRP (A Better Routeplanner), må du oppgi en unik identifikator for hvert kjøretøy (`vin`) samt en autentiseringstoken (`token`). Disse verdiparene gjør det mulig å etablere en samsvar mellom kjøretøyet ditt og dets token i ABRP-systemet.
+
+#### Forutsetninger
+
+For å hente tokenet ditt, gå til kjøretøyet ditt på A Better Routeplanner, velg "Live Data", og koble deretter kjøretøyet ditt ved hjelp av "Generic"-seksjonen. Tokenet som skal limes inn i konfigurasjonen vises. Du må konfigurere en samsvar mellom VIN og tokenet for hvert kjøretøy du ønsker å koble til ABRP.
+
+#### Konfigurasjonsformat
+
+Hver linje bør følge dette formatet:
+
+- `vin`: Dette feltet representerer **Vehicle Identification Number** (Kjøretøyidentifikasjonsnummer). Det er unikt for hvert kjøretøy og inneholder 17 alfanumeriske tegn.
+- `token`: Dette feltet representerer en **autentiseringstoken** spesifikk for hvert kjøretøy. Denne tokenen genereres av ABRP når du kobler kjøretøyet ditt til plattformen.
+
+### 8. Ekspertmodus
 
 Ekspertmodus muliggjør bruk av alle innfødte carconnectivity-funksjoner, inkludert de som ikke er tilgjengelige gjennom det grafiske grensesnittet-så lenge de tilsvarende funksjonene støttes av tilleggsbokstene.
 

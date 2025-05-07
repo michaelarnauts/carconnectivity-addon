@@ -114,7 +114,31 @@ Définissez la quantité d'informations enregistrées dans les journaux:
 -   `Error`: Affiche uniquement les messages d'erreur.
 -   `Debug`: Affiche des détails supplémentaires utiles pour le dépannage.
 
-### 7. Mode expert
+### 7. `ABRP - A Better Routeplanner`
+
+Pour chaque véhicule que vous souhaitez connecter à ABRP (A Better Routeplanner), vous devez fournir un identifiant unique pour chaque véhicule (`vin`) ainsi qu'un jeton d'authentification (`token`). Ces paires de valeurs permettent d'établir une correspondance entre votre véhicule et son token dans le système ABRP.
+
+#### Pré-requis
+
+Pour récupérer votre jeton, accédez à votre véhicule sur A Better Routeplanner, sélectionnez « Live Data », puis reliez votre véhicule à l'aide de la section « Generic ». Le jeton à coller dans la configuration s'affichera. Vous devez configurer une correspondance entre le VIN et le jeton pour chaque véhicule que vous souhaitez connecter à ABRP.
+
+#### Format de la Configuration
+
+Chaque ligne doit suivre le format suivant :
+
+- `vin`: Ce champ représente le **Vehicle Identification Number** (numéro d'identification du véhicule). Il est unique pour chaque véhicule et contient 17 caractères alphanumériques.
+- `token`: Ce champ représente un **jeton d'authentification** spécifique à chaque véhicule. Ce jeton est généré par ABRP lorsque vous connectez votre véhicule à la plateforme.
+
+##### Exemple de configuration valide :
+
+```
+- vin: TMBLJ9NY8SF000000
+  token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
+- vin: TMLLJ9NY23F000000
+  token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
+```
+
+### 8. Mode expert
 
 Le mode expert permet d'utiliser toutes les fonctions natives de `CarConnectivity`, y compris celles non disponibles via l'interface de configuration graphique, tant que les fonctions correspondantes sont prises en charge par les binaires contenus dans le module complémentaire.
 

@@ -114,7 +114,22 @@ Zdefiniuj ilość informacji zarejestrowanych w dziennikach:
 -   `Error`: Wyświetla tylko komunikaty o błędach.
 -   `Debug`: Wyświetla dodatkowe szczegóły przydatne do rozwiązywania problemów.
 
-### 7. Tryb ekspertów
+### 7. `ABRP - A Better Routeplanner`
+
+Dla każdego pojazdu, który chcesz połączyć z ABRP (A Better Routeplanner), musisz podać unikalny identyfikator dla każdego pojazdu (`vin`) oraz token uwierzytelniający (`token`). Te pary wartości umożliwiają powiązanie pojazdu z jego tokenem w systemie ABRP.
+
+#### Wymagania wstępne
+
+Aby pobrać swój token, przejdź do swojego pojazdu na A Better Routeplanner, wybierz "Live Data", a następnie połącz pojazd, używając sekcji "Generic". Token do wklejenia w konfiguracji zostanie wyświetlony. Musisz skonfigurować powiązanie między VIN a tokenem dla każdego pojazdu, który chcesz połączyć z ABRP.
+
+#### Format konfiguracji
+
+Każda linia powinna być w następującym formacie:
+
+- `vin`: To pole reprezentuje **Vehicle Identification Number** (Numer Identyfikacyjny Pojazdu). Jest unikalne dla każdego pojazdu i składa się z 17 znaków alfanumerycznych.
+- `token`: To pole reprezentuje **token uwierzytelniający** specyficzny dla każdego pojazdu. Token ten jest generowany przez ABRP, gdy łączysz pojazd z platformą.
+
+### 8. Tryb ekspertów
 
 Tryb ekspertów umożliwia użycie wszystkich natywnych funkcji Carconnectivity, w tym tych, które nie są dostępne za pośrednictwem interfejsu graficznego-o ile odpowiednie funkcje są obsługiwane przez dodatkowe binarie.
 

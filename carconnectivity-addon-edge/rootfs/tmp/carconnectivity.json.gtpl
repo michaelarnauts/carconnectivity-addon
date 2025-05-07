@@ -73,6 +73,25 @@
                 }
             },
             {{- end }}
+            {{- if  .connector_abrp_tokens }}
+                {{- if  gt (len .connector_abrp_tokens) 0 }}
+                    {
+                        "type": "abrp",
+                        "disabled": true,
+                        "config": {
+                            "tokens": {
+                                {{- $first := true }}
+                                {{- range .connector_abrp_tokens }}
+                                    {{- if not $first }},{{ end }}
+                                    "{{ .vin }}": "{{ .token }}"
+                                    {{- $first = false }}
+                                {{- end }}
+                            },
+                            "log_level": "{{ .log_level }}"
+                        }
+                    },
+                {{- end }}
+            {{- end }}
             {
                 "type": "mqtt_homeassistant",
                 "config": {

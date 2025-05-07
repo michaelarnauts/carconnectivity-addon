@@ -1,4 +1,13 @@
-## 0.2.12
+ ## 0.2.13
+
+
+### 🚀 New Features
+
+- Add **CarConnectivity-plugin-abrp** → [v0.6](https://github.com/tillsteinbach/CarConnectivity-plugin-abrp.git)
+
+ --- 
+ 
+ ## 0.2.12
 
 
 ### 🛠️ Fixes & Updates

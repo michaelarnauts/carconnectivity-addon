@@ -114,7 +114,22 @@ Definire la quantità di informazioni registrate nei registri:
 -   `Error`: Visualizza solo i messaggi di errore.
 -   `Debug`: Visualizza ulteriori dettagli utili per la risoluzione dei problemi.
 
-### 7. Modalità esperta
+### 7. `ABRP - A Better Routeplanner`
+
+Per ogni veicolo che desideri connettere ad ABRP (A Better Routeplanner), devi fornire un identificatore unico per ogni veicolo (`vin`) insieme a un token di autenticazione (`token`). Questi coppie di valori consentono di stabilire una corrispondenza tra il tuo veicolo e il suo token nel sistema ABRP.
+
+#### Requisiti
+
+Per ottenere il tuo token, accedi al tuo veicolo su A Better Routeplanner, seleziona "Live Data", quindi collega il tuo veicolo utilizzando la sezione "Generic". Il token da incollare nella configurazione verrà visualizzato. Devi configurare una corrispondenza tra il VIN e il token per ogni veicolo che desideri connettere ad ABRP.
+
+#### Formato della Configurazione
+
+Ogni riga deve seguire il formato seguente:
+
+- `vin`: Questo campo rappresenta il **Vehicle Identification Number** (Numero di Identificazione del Veicolo). È unico per ogni veicolo e contiene 17 caratteri alfanumerici.
+- `token`: Questo campo rappresenta un **token di autenticazione** specifico per ogni veicolo. Questo token viene generato da ABRP quando colleghi il tuo veicolo alla piattaforma.
+
+### 8.  Modalità esperta
 
 La modalità Expert consente l'uso di tutte le funzioni di Carconnettività native, comprese quelle non disponibili attraverso l'interfaccia grafica, a condizione che le funzioni corrispondenti siano supportate dai binari aggiuntivi.
 
