@@ -17,6 +17,7 @@ env:
     VW=https://github.com/tillsteinbach/CarConnectivity-connector-volkswagen.git
     TRONITY=https://github.com/tillsteinbach/CarConnectivity-connector-tronity.git
     VOLVO=https://github.com/tillsteinbach/CarConnectivity-connector-volvo.git
+    ABRP=https://github.com/tillsteinbach/CarConnectivity-plugin-abrp.git
     MQTT=https://github.com/tillsteinbach/CarConnectivity-plugin-mqtt.git
     MQTTHA=https://github.com/tillsteinbach/CarConnectivity-plugin-mqtt_homeassistant.git
     CC=https://github.com/tillsteinbach/CarConnectivity.git
