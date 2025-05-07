@@ -129,6 +129,15 @@ Każda linia powinna być w następującym formacie:
 - `vin`: To pole reprezentuje **Vehicle Identification Number** (Numer Identyfikacyjny Pojazdu). Jest unikalne dla każdego pojazdu i składa się z 17 znaków alfanumerycznych.
 - `token`: To pole reprezentuje **token uwierzytelniający** specyficzny dla każdego pojazdu. Token ten jest generowany przez ABRP, gdy łączysz pojazd z platformą.
 
+##### Przykład prawidłowej konfiguracji:
+
+```
+- vin: TMBLJ9NY8SF000000
+  token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
+- vin: TMLLJ9NY23F000000
+  token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
+```
+
 ### 8. Tryb ekspertów
 
 Tryb ekspertów umożliwia użycie wszystkich natywnych funkcji Carconnectivity, w tym tych, które nie są dostępne za pośrednictwem interfejsu graficznego-o ile odpowiednie funkcje są obsługiwane przez dodatkowe binarie.

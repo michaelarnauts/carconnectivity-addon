@@ -129,6 +129,15 @@ Ogni riga deve seguire il formato seguente:
 - `vin`: Questo campo rappresenta il **Vehicle Identification Number** (Numero di Identificazione del Veicolo). È unico per ogni veicolo e contiene 17 caratteri alfanumerici.
 - `token`: Questo campo rappresenta un **token di autenticazione** specifico per ogni veicolo. Questo token viene generato da ABRP quando colleghi il tuo veicolo alla piattaforma.
 
+##### Esempio di una configurazione valida:
+
+```
+- vin: TMBLJ9NY8SF000000
+  token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
+- vin: TMLLJ9NY23F000000
+  token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
+```
+
 ### 8.  Modalità esperta
 
 La modalità Expert consente l'uso di tutte le funzioni di Carconnettività native, comprese quelle non disponibili attraverso l'interfaccia grafica, a condizione che le funzioni corrispondenti siano supportate dai binari aggiuntivi.

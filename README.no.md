@@ -129,6 +129,15 @@ Hver linje bør følge dette formatet:
 - `vin`: Dette feltet representerer **Vehicle Identification Number** (Kjøretøyidentifikasjonsnummer). Det er unikt for hvert kjøretøy og inneholder 17 alfanumeriske tegn.
 - `token`: Dette feltet representerer en **autentiseringstoken** spesifikk for hvert kjøretøy. Denne tokenen genereres av ABRP når du kobler kjøretøyet ditt til plattformen.
 
+##### Eksempel på en gyldig konfigurasjon:
+
+```
+- vin: TMBLJ9NY8SF000000
+  token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
+- vin: TMLLJ9NY23F000000
+  token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
+```
+
 ### 8. Ekspertmodus
 
 Ekspertmodus muliggjør bruk av alle innfødte carconnectivity-funksjoner, inkludert de som ikke er tilgjengelige gjennom det grafiske grensesnittet-så lenge de tilsvarende funksjonene støttes av tilleggsbokstene.

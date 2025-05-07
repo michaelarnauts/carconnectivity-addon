@@ -129,6 +129,15 @@ Jede Zeile muss folgendem Format entsprechen:
 - `vin`: Dieses Feld stellt die **Vehicle Identification Number** (Fahrzeug-Identifikationsnummer) dar. Es ist für jedes Fahrzeug einzigartig und besteht aus 17 alphanumerischen Zeichen.
 - `token`: Dieses Feld stellt ein **Authentifizierungstoken** dar, das für jedes Fahrzeug spezifisch ist. Dieses Token wird von ABRP generiert, wenn Sie Ihr Fahrzeug mit der Plattform verbinden.
 
+##### Beispiel für eine gültige Konfiguration:
+
+```
+- vin: TMBLJ9NY8SF000000
+  token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
+- vin: TMLLJ9NY23F000000
+  token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
+```
+
 ### 8. Expertenmodus
 
 Der Expertenmodus ermöglicht die Verwendung aller nativen Carconnektivitätsfunktionen, einschließlich derer, die nicht über die grafische Schnittstelle verfügbar sind. Solange die entsprechenden Funktionen durch die Add-On-Binärdateien unterstützt werden.
