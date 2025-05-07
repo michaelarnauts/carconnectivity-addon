@@ -1,0 +1,82 @@
+configuration:
+  connector_type_brand1:
+    name: "Produsentmerke for den 1. bilen"
+    description: "Muliggjør utnyttelse av spesifikke alternativer relatert til merket."
+  connector_username_brand1:
+    name: "Brukernavn for den 1. bilen"
+    description: "Skriv inn e-postadressen som brukes til å logge på tjenesten for den 1. bilen."
+  connector_password_brand1:
+    name: "Passord for den 1. bilen"
+    description: "Skriv inn passordet for kontoen din for den 1. bilen."
+  connector_spin_brand1:
+    name: "PIN-kode for den 1. bilen"
+    description: "Skriv inn den 4-sifrede PIN-koden som brukes for ekstern tilgang til den 1. bilen."
+  connector_interval_brand1:
+    name: "Oppdateringsintervall for den 1. bilen"
+    description: "Skriv inn intervallet i sekunder mellom to informasjonsinnhentinger for den 1. bilen. Vær oppmerksom på at API-kall er underlagt et kvote. Når kvoten er overskredet, vil API-en ikke fungere i en gitt periode."
+
+  connector_type_brand2:
+    name: "Produsentmerke for den 2. bilen"
+    description: "Muliggjør utnyttelse av spesifikke alternativer relatert til merket."
+  connector_username_brand2:
+    name: "Brukernavn for den 2. bilen"
+    description: "Skriv inn e-postadressen som brukes til å logge på tjenesten for den 2. bilen. La verdien stå tom hvis du ikke ønsker å bruke denne koblingen."
+  connector_password_brand2:
+    name: "Passord for den 2. bilen"
+    description: "Skriv inn passordet for kontoen din for den 2. bilen."
+  connector_spin_brand2:
+    name: "PIN-kode for den 2. bilen"
+    description: "Skriv inn den 4-sifrede PIN-koden som brukes for ekstern tilgang til den 2. bilen."
+  connector_interval_brand2:
+    name: "Oppdateringsintervall for den 2. bilen"
+    description: "Skriv inn intervallet i sekunder mellom to informasjonsinnhentinger for den 2. bilen. Vær oppmerksom på at API-kall er underlagt et kvote. Når kvoten er overskredet, vil API-en ikke fungere i en gitt periode."
+
+  connector_volvo_key_primary:
+    name: "Primærnøkkel for Volvo API-er"
+    description: "Nøkkelen ser slik ut 'd64b33a7067a4c428def9474964'"
+  connector_volvo_key_secondary:
+    name: "Sekundærnøkkel for Volvo API-er"
+    description: "Nøkkelen ser slik ut 'de0c63a885ffdac4ccc92d8744905611caf'"
+  connected_volvo_vehicle_token:
+    name: "Volvo token spesifikt for kjøretøy"
+    description: "Tokenet ser slik ut 'eyJhbGciOiJSUzI1NiIsImtpZCI6InhqTzF5SDVmM29WendVeWRVNDJwSzZ0c2d4OF9SUzI1NiIsInBpLmF0bSI6Ijl0MWYifQ.eyJzY29wZSI6ImNvbnZlOmJyY........X4EgbMiw'"
+  connector_volvo_location_token:
+    name: "Steds-spesifikt token"
+    description: "Tokenet ser slik ut 'eyJhbGciOiJSUzI1NiIsImtpZCI6InhqTzF5SDVmM29WendVeWRVNDJwSzZ0c2d4OF9SUzI1NiIsInBpLmF0bSI6Ijl0MWYifQ.eyJzY29wZSI6ImNvbnZlOmJyY........X4EgbMiw'"
+  connector_volvo_interval:
+    name: "Oppdateringsintervall for Volvo-bilen"
+    description: "Skriv inn intervallet i sekunder mellom to datainnhentinger for den 1. bilen. Vær oppmerksom på at API-kall er underlagt et kvote. Når kvoten er overskredet, vil API-en ikke fungere i en gitt periode."
+
+  mqtt_username:
+    name: "MQTT Brukernavn"
+    description: "Skriv inn brukernavnet for å koble til MQTT-broker."
+  mqtt_password:
+    name: "MQTT Passord"
+    description: "Skriv inn passordet for å koble til MQTT-broker."
+  mqtt_broker:
+    name: "MQTT Broker Adresse"
+    description: "Skriv inn IP-adressen eller domenenavnet til MQTT-serveren."
+  mqtt_port:
+    name: "MQTT Broker Port"
+    description: "Skriv inn portnummeret til MQTT-serveren."
+  log_level:
+    name: "Loggnivå"
+    description: "Velg ønsket loggnivå (info, warning, error, debug)."
+
+  connector_username_webui:
+    name: "WebUI Administratornavn"
+    description: "Administratornavn for tilgang til Carconnectivity WebUI"
+  connector_password_webui:
+    name: "WebUI Passord"
+    description: "Passord for tilgang til Carconnectivity WebUI"
+
+  connector_abrp_tokens:
+    name: "ABRP Tokens Liste"
+    description: "For å hente tokenet ditt, gå til kjøretøyet ditt på A Better Routeplanner, velg 'Live Data', og koble deretter kjøretøyet ditt ved å bruke 'Generic' seksjonen. Tokenet som skal limes inn i konfigurasjonen vises. Du må konfigurere en samsvar mellom VIN og token for hvert kjøretøy du ønsker å koble til ABRP. Vennligst se dokumentasjonen til tilleggspakken for syntaksen."
+
+  api_log_level:
+    name: "Loggnivå for api"
+    description: "Velg ønsket loggnivå (info, warning, error, debug)."
+  expert:
+    name: "Aktiver Ekspertmodus"
+    description: "Ekspertmodus lar deg bruke en tilpasset konfigurasjonsfil. Når denne modusen er aktivert, kan brukeren gi en fil kalt /addon_configs/1b1291d4_carconnectivity-addon/carconnectivity.expert.json som inneholder de ønskede innstillingene. Dette erstatter helt konfigurasjonen fra det grafiske grensesnittet, som vil være tilgjengelig i /addon_configs/1b1291d4_carconnectivity-addon/carconnectivity.UI.json. Vennligst se Carconnectivity-dokumentasjonen. Katalogen /addon_configs/1b1291d4_carconnectivity-addon/ vises kanskje ikke i Home Assistant filsystemet. Hvis dette er tilfelle, bør supervisoren startes på nytt."

@@ -70,6 +70,10 @@ configuration:
     name: "Hasło WebUI"
     description: "Hasło do dostępu do WebUI Carconnectivity"
 
+  connector_abrp_tokens:
+    name: "Lista tokenów ABRP"
+    description: "Aby uzyskać swój token, przejdź do swojego pojazdu w A Better Routeplanner, wybierz 'Live Data', a następnie połącz pojazd za pomocą sekcji 'Generic'. Token, który należy wkleić do konfiguracji, zostanie wyświetlony. Musisz skonfigurować powiązanie między numerem VIN a tokenem dla każdego pojazdu, który chcesz połączyć z ABRP. Zapoznaj się z dokumentacją dodatku, aby poznać składnię."
+
   api_log_level:
     name: "Poziom logowania dla API"
     description: "Wybierz żądany poziom logowania (info, ostrzeżenie, błąd, debug)."
