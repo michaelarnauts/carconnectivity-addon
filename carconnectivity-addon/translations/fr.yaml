@@ -1,6 +1,6 @@
 configuration:
   connector_type_brand1:
-    name: "Marque du constructeur pour la 1ère voiture"
+    name: "🚗 Choix pour la 1ère voiture"
     description: "Permet d'exploiter les options spécifiques lies à la marque."
   connector_username_brand1:
     name: "Nom d'utilisateur pour la 1ère voiture"
@@ -16,7 +16,7 @@ configuration:
     description: "Entrez l'intervalle en secondes entre deux récupérations des informations pour la 1ère voiture. Attention, les appels API sont soumis à un quota. Une fois le quota dépassé, l'API n'est plus fonctionnelle pendant une période donnée."
 
   connector_type_brand2:
-    name: "Marque du constructeur pour la 2ème voiture"
+    name: "🚙 Choix pour la 2ème voiture"
     description: "Permet d'exploiter les options spécifiques lies à la marque."
   connector_username_brand2:
     name: "Nom d'utilisateur pour la 2ème voiture"
@@ -31,6 +31,9 @@ configuration:
     name: "Intervalle de rafraîchissement pour la 2ème voiture"
     description: "Entrez l'intervalle en secondes entre deux récupérations des informations pour la 2ème voiture. Attention, les appels API sont soumis à un quota. Une fois le quota dépassé, l'API n'est plus fonctionnelle pendant une période donnée."
 
+  separator_volvo:
+    name: "🚕 Choix spécifique"
+    description: ""
   connector_volvo_key_primary:
     name: "Clé primaire pour les API Volvo"
     description: "La clé ressemble à ceci 'd64b33a7067a4c428def9474964'"
@@ -47,8 +50,10 @@ configuration:
     name: "Intervalle de rafraîchissement pour la voiture Volvo"
     description: "Entrez l'intervalle en secondes entre deux récupérations des informations pour la 1ère voiture. Attention, les appels API sont soumis à un quota. Une fois le quota dépassé, l'API n'est plus fonctionnelle pendant une période donnée."
 
+  separator_mqtt:
+    name: "💬 Configuration"
   mqtt_username:
-    name: "Nom d'utilisateur MQTT"
+    name: " Nom d'utilisateur MQTT"
     description: "Entrez le nom d'utilisateur pour la connexion au broker MQTT."
   mqtt_password:
     name: "Mot de passe MQTT"
@@ -59,10 +64,13 @@ configuration:
   mqtt_port:
     name: "Port du broker MQTT"
     description: "Entrez le numéroe de port du serveur MQTT."
-  log_level:
-    name: "Niveau de journalisation"
-    description: "Sélectionnez le niveau de journalisation souhaité (info, warning, error, debug)."
 
+  log_level:
+    name: "🔖 Sélectionnez le niveau général de journalisation souhaité (info, warning, error, debug)."
+    description: ""
+
+  connector_enabler_webui:
+    name: "🌏 Activer l'interface WEB de Carconnectivity"
   connector_username_webui:
     name: "Nom administrateur WebUI"
     description: "Nom administrateur pour l'accès à Carconnectivity WebUI"
@@ -70,13 +78,16 @@ configuration:
     name: "Mot de passe WebUI"
     description: "Mot de passe  pour l'accès à Carconnectivity WebUI"
 
+  connector_enabler_abrp:
+    name: "🔋 Activer la partie « A Better Routeplanner (ABRP) »"
   connector_abrp_tokens:
     name: "Liste des tokens ABRP"
     description: "Pour récupérer votre jeton, accédez à votre véhicule sur A Better Routeplanner, sélectionnez « Live Data », puis reliez votre véhicule à l'aide de la section « Generic ». Le jeton à coller dans la configuration s'affichera. Vous devez configurer une correspondance entre le VIN et le jeton pour chaque véhicule que vous souhaitez connecter à ABRP. Consultez la documentation de l'addon pour connaître la syntaxe."
 
   api_log_level:
-    name: "Niveau de journalisation pour les api"
-    description: "Sélectionnez le niveau de journalisation souhaité (info, warning, error, debug)."
+    name: "🔖 Sélectionnez le niveau de journalisation souhaité (info, warning, error, debug) pour les API."
+    description: ""
+
   expert:
-    name: "Activer le mode expert"
+    name: "🔑 Activer le mode expert"
     description: "Le Mode Expert permet d'utiliser un fichier de configuration personnalisé. Lorsque ce mode est activé, l'utilisateur peut fournir un fichier nommé /addon_configs/1b1291d4_carconnectivity-addon/carconnectivity.expert.json contenant les paramètres souhaités. Il remplace complétement la configuration issue de l'interface graphique, qui sera disponible dans /addon_configs/1b1291d4_carconnectivity-addon//carconnectivity.UI.json. Il faut se reférer à la documention de Carconnectivity. Le répertoire /addon_configs/1b1291d4_carconnectivity-addon/ peut ne pas apparaitre dans le système de fichiers de Home Assistant. Si tel est le cas, alors il faut redémarrer le supervisor."
