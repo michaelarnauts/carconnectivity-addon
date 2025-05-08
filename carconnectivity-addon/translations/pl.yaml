@@ -73,7 +73,7 @@ configuration:
     name: "🌏 Włącz interfejs WWW Carconnectivity"
   connector_username_webui:
     name: "Nazwa administratora WebUI"
-    description: "Nazwa administratora do dostępu do Carconnectivity WebUI."
+    description: "Nazwa administratora do logowania się w interfejsie WebUI Carconnectivity. Użyj 'autologin' jako nazwy użytkownika, aby wyłączyć żądanie uwierzytelnienia."
   connector_password_webui:
     name: "Hasło WebUI"
     description: "Hasło do dostępu do Carconnectivity WebUI."

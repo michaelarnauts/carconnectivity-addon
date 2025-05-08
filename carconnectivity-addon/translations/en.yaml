@@ -73,7 +73,7 @@ configuration:
     name: "🌏 Enable Carconnectivity WEB interface"
   connector_username_webui:
     name: "WebUI Administrator Name"
-    description: "Administrator name for access to Carconnectivity WebUI"
+    description: "Administrator name for access to Carconnectivity WebUI. Use autologin as webui login to disable auth request"
   connector_password_webui:
     name: "WebUI Password"
     description: "Password for access to Carconnectivity WebUI"

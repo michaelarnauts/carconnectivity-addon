@@ -73,7 +73,7 @@ configuration:
     name: "🌏 Aktiver Carconnectivity WebUI"
   connector_username_webui:
     name: "Administratorbrukernavn for WebUI"
-    description: "Administratornavn for tilgang til Carconnectivity WebUI."
+    description: "Administratornavn for tilgang til Carconnectivity WebUI. Bruk 'autologin' som brukernavn for å deaktivere autentiseringsforespørselen."
   connector_password_webui:
     name: "WebUI-passord"
     description: "Passord for tilgang til Carconnectivity WebUI."
