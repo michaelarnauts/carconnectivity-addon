@@ -70,7 +70,7 @@ schema:
   mqtt_broker: str
   mqtt_port: int
   connector_enabler_webui: bool
-  connector_username_webui: str
+  connector_username_webui: str?
   connector_password_webui: password?
   connector_enabler_abrp: bool
   connector_abrp_tokens:
