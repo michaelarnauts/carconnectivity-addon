@@ -1,3 +1,13 @@
+
+ ## 0.3.2
+
+
+### 🚀 New Features
+
+- Use autologin as webui login to disable auth request
+
+ --- 
+
  ## 0.3.1
 
 
