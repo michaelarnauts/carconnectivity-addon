@@ -62,9 +62,13 @@
                     "log_level": "{{ .log_level }}"
                 }
             },
-            {{- if .connector_username_webui }}
             {
                 "type": "webui",
+                {{- if .connector_enabler_webui }}
+                    "disabled": false,
+                {{- else }}
+                    "disabled": true,
+                {{- end }}
                 "config": {
                     "username": "{{ .connector_username_webui }}",
                     "password": "{{ .connector_password_webui }}",
@@ -72,25 +76,25 @@
                     "log_level": "{{ .log_level }}"
                 }
             },
-            {{- end }}
-            {{- if  .connector_abrp_tokens }}
-                {{- if  gt (len .connector_abrp_tokens) 0 }}
-                    {
-                        "type": "abrp",
-                        "config": {
-                            "tokens": {
-                                {{- $first := true }}
-                                {{- range .connector_abrp_tokens }}
-                                    {{- if not $first }},{{ end }}
-                                    "{{ .vin }}": "{{ .token }}"
-                                    {{- $first = false }}
-                                {{- end }}
-                            },
-                            "log_level": "{{ .log_level }}"
-                        }
-                    },
+            {
+                "type": "abrp",
+                {{- if .connector_enabler_abrp }}
+                    "disabled": false,
+                {{- else }}
+                    "disabled": true,
                 {{- end }}
-            {{- end }}
+                "config": {
+                    "tokens": {
+                        {{- $first := true }}
+                        {{- range .connector_abrp_tokens }}
+                            {{- if not $first }},{{ end }}
+                            "{{ .vin }}": "{{ .token }}"
+                            {{- $first = false }}
+                        {{- end }}
+                    },
+                    "log_level": "{{ .log_level }}"
+                }
+            },
             {
                 "type": "mqtt_homeassistant",
                 "config": {

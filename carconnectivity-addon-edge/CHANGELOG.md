@@ -1,3 +1,12 @@
+ ## 0.3.1
+
+
+### 🛠️ Fixes & Updates
+
+- Rework a bit the way Config UI looks like
+
+ --- 
+
  ## 0.3.0
 
 
