@@ -1,36 +1,39 @@
 configuration:
   connector_type_brand1:
-    name: "Manufacturer brand for the 1st car"
-    description: "Allows exploiting specific options related to the brand."
+    name: "🚗 Choice for the 1st car"
+    description: "Allows use of brand-specific options."
   connector_username_brand1:
     name: "Username for the 1st car"
-    description: "Enter the email address used to log in to the service for the 1st car."
+    description: "Enter the email address used to connect to the service for the 1st car."
   connector_password_brand1:
     name: "Password for the 1st car"
     description: "Enter the password for your account for the 1st car."
   connector_spin_brand1:
     name: "PIN code for the 1st car"
-    description: "Enter the 4-digit PIN code used for remote access for the 1st car."
+    description: "Enter the 4-digit PIN used for remote access to the 1st car."
   connector_interval_brand1:
     name: "Refresh interval for the 1st car"
-    description: "Enter the interval in seconds between two information retrievals for the 1st car. Be aware that API calls are subject to a quota. Once the quota is exceeded, the API will be non-functional for a given period."
+    description: "Enter the interval in seconds between each data fetch for the 1st car. Be aware that API calls are quota-limited. Once the quota is exceeded, the API becomes non-functional for a given time."
 
   connector_type_brand2:
-    name: "Manufacturer brand for the 2nd car"
-    description: "Allows exploiting specific options related to the brand."
+    name: "🚙 Choice for the 2nd car"
+    description: "Allows use of brand-specific options."
   connector_username_brand2:
     name: "Username for the 2nd car"
-    description: "Enter the email address used to log in to the service for the 2nd car. Leave the value empty if you do not wish to use this connector."
+    description: "Enter the email address used to connect to the service for the 2nd car. Leave empty if you do not wish to use this connector."
   connector_password_brand2:
     name: "Password for the 2nd car"
     description: "Enter the password for your account for the 2nd car."
   connector_spin_brand2:
     name: "PIN code for the 2nd car"
-    description: "Enter the 4-digit PIN code used for remote access for the 2nd car."
+    description: "Enter the 4-digit PIN used for remote access to the 2nd car."
   connector_interval_brand2:
     name: "Refresh interval for the 2nd car"
-    description: "Enter the interval in seconds between two information retrievals for the 2nd car. Be aware that API calls are subject to a quota. Once the quota is exceeded, the API will be non-functional for a given period."
+    description: "Enter the interval in seconds between each data fetch for the 2nd car. Be aware that API calls are quota-limited. Once the quota is exceeded, the API becomes non-functional for a given time."
 
+  separator_volvo:
+    name: "🚕 Specific choice"
+    description: ""
   connector_volvo_key_primary:
     name: "Primary key for Volvo APIs"
     description: "The key looks like this 'd64b33a7067a4c428def9474964'"
@@ -38,15 +41,17 @@ configuration:
     name: "Secondary key for Volvo APIs"
     description: "The key looks like this 'de0c63a885ffdac4ccc92d8744905611caf'"
   connected_volvo_vehicle_token:
-    name: "Vehicle-specific Volvo token"
+    name: "Token specific to the Volvo car"
     description: "The token looks like this 'eyJhbGciOiJSUzI1NiIsImtpZCI6InhqTzF5SDVmM29WendVeWRVNDJwSzZ0c2d4OF9SUzI1NiIsInBpLmF0bSI6Ijl0MWYifQ.eyJzY29wZSI6ImNvbnZlOmJyY........X4EgbMiw'"
   connector_volvo_location_token:
-    name: "Location-specific token"
+    name: "Token specific to geolocation"
     description: "The token looks like this 'eyJhbGciOiJSUzI1NiIsImtpZCI6InhqTzF5SDVmM29WendVeWRVNDJwSzZ0c2d4OF9SUzI1NiIsInBpLmF0bSI6Ijl0MWYifQ.eyJzY29wZSI6ImNvbnZlOmJyY........X4EgbMiw'"
   connector_volvo_interval:
     name: "Refresh interval for the Volvo car"
-    description: "Enter the interval in seconds between two data retrievals for the 1st car. Be aware that API calls are subject to a quota. Once the quota is exceeded, the API will be non-functional for a given period."
+    description: "Enter the interval in seconds between data retrievals for the 1st car. Be aware that API calls are subject to a quota. Once the quota is exceeded, the API will be non-functional for a certain period."
 
+  separator_mqtt:
+    name: "💬 Configuration"
   mqtt_username:
     name: "MQTT Username"
     description: "Enter the username for connecting to the MQTT broker."
@@ -57,26 +62,32 @@ configuration:
     name: "MQTT Broker Address"
     description: "Enter the IP address or domain name of the MQTT server."
   mqtt_port:
-    name: "MQTT Broker port"
+    name: "MQTT Broker Port"
     description: "Enter the port number of the MQTT server."
-  log_level:
-    name: "Log Level"
-    description: "Select the desired log level (info, warning, error, debug)."
 
+  log_level:
+    name: "🔖 Select the general logging level (info, warning, error, debug)."
+    description: ""
+
+  connector_enabler_webui:
+    name: "🌏 Enable Carconnectivity WEB interface"
   connector_username_webui:
-    name: "WebUI administrator name"
+    name: "WebUI Administrator Name"
     description: "Administrator name for access to Carconnectivity WebUI"
   connector_password_webui:
-    name: "WebUI password"
+    name: "WebUI Password"
     description: "Password for access to Carconnectivity WebUI"
 
+  connector_enabler_abrp:
+    name: "🔋 Enable the “A Better Routeplanner (ABRP)” integration"
   connector_abrp_tokens:
-    name: "ABRP Tokens List"
-    description: "To retrieve your token, go to your vehicle on A Better Routeplanner, select 'Live Data', then link your vehicle using the 'Generic' section. The token to paste into the configuration will be displayed. You must configure a match between the VIN and the token for each vehicle you wish to connect to ABRP. Please refer to the addon documentation for the syntax."
+    name: "List of ABRP tokens"
+    description: "To retrieve your token, go to your vehicle on A Better Routeplanner, select 'Live Data', then link your vehicle using the 'Generic' section. The token to paste into the configuration will appear. You must set up a mapping between the VIN and the token for each vehicle you want to connect to ABRP. See the addon documentation for syntax details."
 
   api_log_level:
-    name: "Logging level for api"
-    description: "Select the desired logging level (info, warning, error, debug)."
+    name: "🔖 Select the desired logging level (info, warning, error, debug) for APIs."
+    description: ""
+
   expert:
-    name: "Enable Expert Mode"
-    description: "The Expert Mode allows the use of a custom configuration file. When this mode is enabled, the user can provide a file named /addon_configs/1b1291d4_carconnectivity-addon/carconnectivity.expert.json containing the desired settings. This completely replaces the configuration from the graphical interface, which will be available in /addon_configs/1b1291d4_carconnectivity-addon/carconnectivity.UI.json. Please refer to the Carconnectivity documentation. The directory /addon_configs/1b1291d4_carconnectivity-addon/ may not appear in the Home Assistant file system. If this is the case, the supervisor should be restarted."
+    name: "🧠 Enable Expert Mode"
+    description: "Expert Mode allows using a custom configuration file. When enabled, the user can provide a file named /addon_configs/1b1291d4_carconnectivity-addon/carconnectivity.expert.json with the desired parameters. It completely overrides the configuration from the GUI, which will be saved as /addon_configs/1b1291d4_carconnectivity-addon/carconnectivity.UI.json. Refer to the Carconnectivity documentation. The directory /addon_configs/1b1291d4_carconnectivity-addon/ might not be visible in the Home Assistant file system. If so, restart the supervisor."
