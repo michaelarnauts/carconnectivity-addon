@@ -75,15 +75,23 @@ print_file() {
 # JSON Verifier
 validate_json() {
     local file="$1"
-    local name="$(basename ${file})"
-    if jq empty "$file" 2>/dev/null; then
+    local name="$(basename "$file")"
+    local result
+    local rc
+    result=$(jq empty "$file" 2>&1)
+    rc=$?
+    if [ $rc -eq 0 ]; then
         color_echo "${GREEN}" "✅ File ${name} is syntactically correct."
         return 0
     else
         color_echo "${RED}" "❌ File ${name} is invalid."
+        echo "Error details: $result"
+        echo "Content of ${name}:"
+        cat "$file"
         return 1
     fi
 }
+
 
 # GET HA LOCALE
 get_ha_locale() {

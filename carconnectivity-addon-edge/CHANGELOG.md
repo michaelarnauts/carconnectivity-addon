@@ -1,4 +1,13 @@
 
+ ## 0.3.3
+
+
+### 🛠️ Fixes & Updates
+
+- Fix typo in template and add better traces in case of error in config UI
+
+ --- 
+
  ## 0.3.2
 
 

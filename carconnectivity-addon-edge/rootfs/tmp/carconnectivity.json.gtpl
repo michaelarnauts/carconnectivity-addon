@@ -74,9 +74,9 @@
                     "password": "{{ .connector_password_webui }}",
                     "app_config": {
                         {{- if eq .connector_username_webui "autologin" }}
-                            "LOGIN_DISABLED": true
+                            "login_disabled": true
                         {{- else }}
-                            "LOGIN_DISABLED": false,
+                            "login_disabled": false
                         {{- end }}
                         },
                     "locale": "en_US",
