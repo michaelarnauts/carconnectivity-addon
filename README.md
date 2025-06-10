@@ -91,6 +91,7 @@ You can access the `Carconnectivity`'s original interface from  using directly f
 You can define your own access credentials:
 - `Username`: WebUI login
 - `Password`: WebUI password
+
 Check your UI config for default values
 
 ![image](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/img/webui.png)
