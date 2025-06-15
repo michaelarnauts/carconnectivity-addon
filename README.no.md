@@ -1,12 +1,8 @@
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-[![GitHub sourcecode](https://img.shields.io/badge/Source-GitHub-green)](https://github.com/Pulpyyyy/carconnectivity-addon/)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Pulpyyyy/carconnectivity-addon)](https://github.com/Pulpyyyy/carconnectivity-addon/releases/latest)
-[![GitHub issues](https://img.shields.io/github/issues/Pulpyyyy/carconnectivity-addon)](https://github.com/Pulpyyyy/carconnectivity-addon/issues)
+![Supports aarch64 Architecture][aarch64-shield]![Supports amd64 Architecture][amd64-shield][![GitHub sourcecode](https://img.shields.io/badge/Source-GitHub-green)](https://github.com/Pulpyyyy/carconnectivity-addon/)[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Pulpyyyy/carconnectivity-addon)](https://github.com/Pulpyyyy/carconnectivity-addon/releases/latest)[![GitHub issues](https://img.shields.io/github/issues/Pulpyyyy/carconnectivity-addon)](https://github.com/Pulpyyyy/carconnectivity-addon/issues)
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 
 # `Home Assistant Add-on: CarConnectivity`
 
@@ -16,7 +12,7 @@
 
 # Oversatte guider
 
-[![French](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/FR.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.fr.md)[![Italian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/IT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.it.md)[![German](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/DE.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.de.md)[![Spanish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/ES.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.es.md)[![Polish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pl.md)[![Portuguese](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pt.md)[![Norwegian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.no.md)[![English](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/US.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.md)
+[![French](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/FR.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.fr.md)[![Italian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/IT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.it.md)[![German](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/DE.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.de.md)[![Spanish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/ES.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.es.md)[![Polish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pl.md)[![Portuguese](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pt.md)[![Norwegian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.no.md)[![Dutch](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.nl.md)[![English](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/US.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.md)
 
 ## Introduksjon
 
@@ -56,11 +52,11 @@ Hver bilprodusent leverer en online tjeneste som lar deg få tilgang til kjøret
 
 #### Nødvendig informasjon:
 
-Til`seat`,`Cupra`,`Skoda`,`Volkswagen`og`Tronity`:
+Til`Seat`,`Cupra`,`Skoda`,`Volkswagen`og`Tronity`:
 
 -   `Brand`: Produsentens merkevare.
 -   `Username`: E -postadressen som ble brukt til å logge på produsentens tjeneste.
--   `Password`: Passordet for produsentkontoen din.
+-   `Password`: The password for your manufacturer account.
 -   `PIN Code`: En 4-sifret kode som kreves for fjerntilgang til visse kjøretøyfunksjoner.
 -   `Refresh Interval`: Definerer hvor ofte (på sekunder) kjøretøyets data blir oppdatert.
 -   `Warning:`Å sette en oppdateringsfrekvens for ofte kan overstige API -forespørselsgrensene pålagt av produsenten, noe som resulterer i midlertidige tilgangsbegrensninger.
@@ -71,7 +67,7 @@ Til`Volvo`:
 
 -   `API Key primary`: Volvo API primærnøkkel.
 -   `API Key secondary`: Volvo API sekundærnøkkel.
--   `Vehicule Token`: Tilgangstoken for kjøretøyet.
+-   `Vehicule Token`: Access token for the vehicule.
 -   `Vehicule Location Token`: Tilgangstoken for plasseringsendpunktet.
 -   `Refresh Interval`: Definerer hvor ofte (på sekunder) kjøretøyets data blir oppdatert.
 -   `Warning:`Å sette en oppdateringsfrekvens for ofte kan overstige API -forespørselsgrensene pålagt av produsenten, noe som resulterer i midlertidige tilgangsbegrensninger.
@@ -114,29 +110,27 @@ Definer mengden informasjon registrert i logger:
 -   `Error`: Viser bare feilmeldinger.
 -   `Debug`: Viser ytterligere detaljer som er nyttige for feilsøking.
 
-### 7. `ABRP - A Better Routeplanner`
+### 7.`ABRP - A Better Routeplanner`
 
-For hvert kjøretøy du ønsker å koble til ABRP (A Better Routeplanner), må du oppgi en unik identifikator for hvert kjøretøy (`vin`) samt en autentiseringstoken (`token`). Disse verdiparene gjør det mulig å etablere en samsvar mellom kjøretøyet ditt og dets token i ABRP-systemet.
+For hvert kjøretøy du ønsker å koble til ABRP (en bedre ruteplan), må du gi en unik identifikator for hvert kjøretøy (`vin`) samt en autentiseringstoken (`token`). Disse verdiene lar deg etablere en kamp mellom kjøretøyet og dets token i ABRP -systemet.
 
 #### Forutsetninger
 
-For å hente tokenet ditt, gå til kjøretøyet ditt på A Better Routeplanner, velg "Live Data", og koble deretter kjøretøyet ditt ved hjelp av "Generic"-seksjonen. Tokenet som skal limes inn i konfigurasjonen vises. Du må konfigurere en samsvar mellom VIN og tokenet for hvert kjøretøy du ønsker å koble til ABRP.
+For å hente tokenet ditt, gå til kjøretøyet ditt på en bedre ruteplan, velg "Live Data", og koble deretter kjøretøyet ditt ved å bruke den "generiske" -delen. Tokenet å lime inn i konfigurasjonen vises. Du må konfigurere en kamp mellom VIN og tokenet for hvert kjøretøy du ønsker å koble til ABRP.
 
 #### Konfigurasjonsformat
 
-Hver linje bør følge dette formatet:
+Hver linje skal følge dette formatet:
 
-- `vin`: Dette feltet representerer **Vehicle Identification Number** (Kjøretøyidentifikasjonsnummer). Det er unikt for hvert kjøretøy og inneholder 17 alfanumeriske tegn.
-- `token`: Dette feltet representerer en **autentiseringstoken** spesifikk for hvert kjøretøy. Denne tokenen genereres av ABRP når du kobler kjøretøyet ditt til plattformen.
+-   `vin`: Dette feltet representerer**Kjøretøyets identifikasjonsnummer**(Vin). Det er unikt for hvert kjøretøy og inneholder 17 alfanumeriske tegn.
+-   `token`: Dette feltet representerer en**Autentiseringstoken**spesifikk for hvert kjøretøy. Dette tokenet genereres av ABRP når du kobler kjøretøyet til plattformen.
 
 ##### Eksempel på en gyldig konfigurasjon:
 
-```
-- vin: TMBLJ9NY8SF000000
-  token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
-- vin: TMLLJ9NY23F000000
-  token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
-```
+    - vin: TMBLJ9NY8SF000000
+      token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
+    - vin: TMLLJ9NY23F000000
+      token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
 
 ### 8. Ekspertmodus
 
