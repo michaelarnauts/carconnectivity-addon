@@ -12,7 +12,7 @@
 
 # Oversatte guider
 
-[![French](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/FR.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.fr.md)[![Italian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/IT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.it.md)[![German](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/DE.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.de.md)[![Spanish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/ES.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.es.md)[![Polish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pl.md)[![Portuguese](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pt.md)[![Norwegian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.no.md)[![Dutch](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.nl.md)[![English](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/US.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.md)
+[![French](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/FR.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.fr.md)[![Italian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/IT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.it.md)[![German](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/DE.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.de.md)[![Spanish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/ES.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.es.md)[![Polish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pl.md)[![Portuguese](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pt.md)[![Norwegian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.no.md)[![Dutch](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.nl.md)[![English](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/US.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.md)
 
 ## Introduksjon
 
@@ -56,7 +56,7 @@ Til`Seat`,`Cupra`,`Skoda`,`Volkswagen`og`Tronity`:
 
 -   `Brand`: Produsentens merkevare.
 -   `Username`: E -postadressen som ble brukt til å logge på produsentens tjeneste.
--   `Password`: The password for your manufacturer account.
+-   `Password`: Passordet for produsentkontoen din.
 -   `PIN Code`: En 4-sifret kode som kreves for fjerntilgang til visse kjøretøyfunksjoner.
 -   `Refresh Interval`: Definerer hvor ofte (på sekunder) kjøretøyets data blir oppdatert.
 -   `Warning:`Å sette en oppdateringsfrekvens for ofte kan overstige API -forespørselsgrensene pålagt av produsenten, noe som resulterer i midlertidige tilgangsbegrensninger.
@@ -67,7 +67,7 @@ Til`Volvo`:
 
 -   `API Key primary`: Volvo API primærnøkkel.
 -   `API Key secondary`: Volvo API sekundærnøkkel.
--   `Vehicule Token`: Access token for the vehicule.
+-   `Vehicule Token`: Tilgangstoken for kjøretøyet.
 -   `Vehicule Location Token`: Tilgangstoken for plasseringsendpunktet.
 -   `Refresh Interval`: Definerer hvor ofte (på sekunder) kjøretøyets data blir oppdatert.
 -   `Warning:`Å sette en oppdateringsfrekvens for ofte kan overstige API -forespørselsgrensene pålagt av produsenten, noe som resulterer i midlertidige tilgangsbegrensninger.
@@ -80,7 +80,7 @@ Du må bruke`MQTT`å sende kjøretøydata til`Home Assistant`, Konfigurer disse 
 -   `Password`: MQTT Meglerpassord
 -   `Broker Address`: IP eller domenenavn på MQTT -serveren
 
-⚠ Hvis du ikke allerede bruker MQTT på`Home Assistant`, kan du for eksempel legge til[`Mosquito Addon`et`MQTT integration`](https://www.home-assistant.io/integrations/mqtt)
+⚠️ If you're not already using MQTT on `Home Assistant`, kan du for eksempel legge til[`Mosquito Addon`et`MQTT integration`](https://www.home-assistant.io/integrations/mqtt)
 
 ### 4.`WEBUI`
 
