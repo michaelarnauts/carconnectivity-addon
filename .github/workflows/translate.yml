@@ -49,3 +49,7 @@ jobs:
         uses: dephraiim/translate-readme@main
         with:
           LANG: no
+      - name: Dutch
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: nl
