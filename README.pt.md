@@ -12,7 +12,7 @@
 
 # Guias traduzidos
 
-[![French](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/FR.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.fr.md)[![Italian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/IT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.it.md)[![German](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/DE.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.de.md)[![Spanish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/ES.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.es.md)[![Polish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pl.md)[![Portuguese](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pt.md)[![Norwegian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.no.md)[![Dutch](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.nl.md)[![English](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/US.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.md)
+[![French](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/FR.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.fr.md)[![Italian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/IT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.it.md)[![German](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/DE.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.de.md)[![Spanish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/ES.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.es.md)[![Polish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pl.md)[![Portuguese](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pt.md)[![Norwegian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.no.md)[![Dutch](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.nl.md)[![English](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/US.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.md)
 
 ## Introdução
 
@@ -84,7 +84,7 @@ Você precisa usar`MQTT`Para enviar dados do veículo para`Home Assistant`, defi
 
 ### 4.`WEBUI`
 
-Você pode acessar o`Carconnectivity`a interface original de usar diretamente de`Home Assistant`.
+You can access the `Carconnectivity`a interface original de usar diretamente de`Home Assistant`.
 Você pode definir suas próprias credenciais de acesso:
 
 -   `Username`: Conecte-se
@@ -120,7 +120,7 @@ Para recuperar seu token, vá ao seu veículo em um melhor planejador de rota, s
 
 #### Formato de configuração
 
-Each line should follow this format:
+Cada linha deve seguir este formato:
 
 -   `vin`: Este campo representa o**Número de identificação do veículo**(Vin). É exclusivo para cada veículo e contém 17 caracteres alfanuméricos.
 -   `token`: Este campo representa um**Token de autenticação**específico para cada veículo. Este token é gerado pelo ABRP quando você conecta seu veículo à plataforma.
@@ -134,7 +134,7 @@ Each line should follow this format:
 
 ### 8. Modo de especialista
 
-Expert Mode enables the use of all native Carconnectivity functions, including those not available through the graphical interface—as long as the corresponding functions are supported by the add-on binaries.
+O modo especialista permite o uso de todas as funções nativas da carconnectividade, incluindo aquelas que não estão disponíveis na interface gráfica-desde que as funções correspondentes sejam suportadas pelos binários complementares.
 
 ⚠️ Aviso:
 Este modo desativa todas as verificações de validação e segurança de conteúdo. Como resultado, mesmo um pequeno erro (como uma sintaxe JSON inválida) pode impedir que o complemento seja lançado corretamente.
