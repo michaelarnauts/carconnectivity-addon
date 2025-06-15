@@ -1,12 +1,8 @@
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-[![GitHub sourcecode](https://img.shields.io/badge/Source-GitHub-green)](https://github.com/Pulpyyyy/carconnectivity-addon/)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Pulpyyyy/carconnectivity-addon)](https://github.com/Pulpyyyy/carconnectivity-addon/releases/latest)
-[![GitHub issues](https://img.shields.io/github/issues/Pulpyyyy/carconnectivity-addon)](https://github.com/Pulpyyyy/carconnectivity-addon/issues)
+![Supports aarch64 Architecture][aarch64-shield]![Supports amd64 Architecture][amd64-shield][![GitHub sourcecode](https://img.shields.io/badge/Source-GitHub-green)](https://github.com/Pulpyyyy/carconnectivity-addon/)[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Pulpyyyy/carconnectivity-addon)](https://github.com/Pulpyyyy/carconnectivity-addon/releases/latest)[![GitHub issues](https://img.shields.io/github/issues/Pulpyyyy/carconnectivity-addon)](https://github.com/Pulpyyyy/carconnectivity-addon/issues)
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 
 # `Home Assistant Add-on: CarConnectivity`
 
@@ -16,7 +12,7 @@
 
 # Guías traducidas
 
-[![French](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/FR.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.fr.md)[![Italian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/IT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.it.md)[![German](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/DE.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.de.md)[![Spanish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/ES.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.es.md)[![Polish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pl.md)[![Portuguese](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pt.md)[![Norwegian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.no.md)[![English](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/US.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.md)
+[![French](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/FR.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.fr.md)[![Italian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/IT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.it.md)[![German](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/DE.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.de.md)[![Spanish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/ES.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.es.md)[![Polish](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PL.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pl.md)[![Portuguese](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/PT.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.pt.md)[![Norwegian](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.no.md)[![Dutch](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/NO.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.nl.md)[![English](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/.github/img/US.svg)](https://github.com/Pulpyyyy/carconnectivity-addon/blob/main/README.md)
 
 ## Introducción
 
@@ -35,7 +31,7 @@ Su trabajo también está disponible como imágenes de Docker. Entonces, si est�
 
 ## Configuración general
 
-Solo complete la configuración de las marcas de vehículos que posee.**Deje todos los demás campos vacíos.**
+Solo complete la configuración de las marcas de vehículos que posee.**Leave all other fields empty.**
 
 ### 1. Seleccionar la marca de su vehículo
 
@@ -56,7 +52,7 @@ Cada fabricante de automóviles proporciona un servicio en línea que le permite
 
 #### Información requerida:
 
-Para`seat`,`Cupra`,`Skoda`,`Volkswagen`y`Tronity`:
+Para`Seat`,`Cupra`,`Skoda`,`Volkswagen`y`Tronity`:
 
 -   `Brand`: La marca del fabricante.
 -   `Username`: La dirección de correo electrónico utilizada para iniciar sesión en el servicio del fabricante.
@@ -78,7 +74,7 @@ Para`Volvo`:
 
 ### 3. Configuración MQTT (obligatoria)
 
-Necesitas usar`MQTT`para enviar datos del vehículo a`Home Assistant`, configure these settings:
+Necesitas usar`MQTT`para enviar datos del vehículo a`Home Assistant`, Configure estos ajustes:
 
 -   `Username`: MQTT Broker Iniciar sesión
 -   `Password`: Contraseña de mqtt corredor
@@ -114,29 +110,27 @@ Defina la cantidad de información registrada en los registros:
 -   `Error`: Muestra solo mensajes de error.
 -   `Debug`: Muestra detalles adicionales útiles para solucionar problemas.
 
-### 7. `ABRP - A Better Routeplanner`
+### 7.`ABRP - A Better Routeplanner`
 
-Para cada vehículo que desee conectar a ABRP (A Better Routeplanner), debe proporcionar un identificador único para cada vehículo (`vin`) así como un token de autenticación (`token`). Estos pares de valores permiten establecer una correspondencia entre su vehículo y su token en el sistema ABRP.
+Para cada vehículo que desea conectarse a ABRP (un mejor rutinPlanner), debe proporcionar un identificador único para cada vehículo (`vin`) así como un token de autenticación (`token`). Estos pares de valores le permiten establecer una coincidencia entre su vehículo y su token en el sistema ABRP.
 
 #### Requisitos previos
 
-Para obtener su token, acceda a su vehículo en A Better Routeplanner, seleccione "Live Data" y luego conecte su vehículo utilizando la sección "Generic". El token que debe pegar en la configuración se mostrará. Debe configurar una correspondencia entre el VIN y el token para cada vehículo que desee conectar a ABRP.
+Para recuperar su token, vaya a su vehículo en un mejor planeador de rutina, seleccione "datos en vivo" y luego vincule su vehículo utilizando la sección "genérica". Se mostrará el token para pegar en la configuración. Debe configurar una coincidencia entre el VIN y el token para cada vehículo que desea conectarse a ABRP.
 
-#### Formato de la Configuración
+#### Formato de configuración
 
-Cada línea debe seguir el siguiente formato:
+Cada línea debe seguir este formato:
 
-- `vin`: Este campo representa el **Vehicle Identification Number** (Número de Identificación del Vehículo). Es único para cada vehículo y contiene 17 caracteres alfanuméricos.
-- `token`: Este campo representa un **token de autenticación** específico para cada vehículo. Este token es generado por ABRP cuando conecta su vehículo a la plataforma.
+-   `vin`: Este campo representa el**Número de identificación del vehículo**(Vin). Es exclusivo de cada vehículo y contiene 17 caracteres alfanuméricos.
+-   `token`: Este campo representa un**token de autenticación**específico de cada vehículo. ABRP genera este token cuando conecta su vehículo a la plataforma.
 
 ##### Ejemplo de una configuración válida:
 
-```
-- vin: TMBLJ9NY8SF000000
-  token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
-- vin: TMLLJ9NY23F000000
-  token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
-```
+    - vin: TMBLJ9NY8SF000000
+      token: 1623fdc3-4aaf-49f5-b51a-1e55435435da2
+    - vin: TMLLJ9NY23F000000
+      token: 12afe123-59d4-8a3d-b9ef-29367de7f8749
 
 ### 8. Modo experto
 
