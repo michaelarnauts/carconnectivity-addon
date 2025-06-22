@@ -1,5 +1,9 @@
 ## 0.3.4
 
+### 🚀 New Features
+
+- Add dutch
+- Revoked UI for better readability
 
 ### 🛠️ Fixes & Updates
 

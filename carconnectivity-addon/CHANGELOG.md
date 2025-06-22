@@ -1,18 +1,62 @@
 ## 0.3.4
 
+### 🚀 New Features
+
+- Add dutch
+- Revoked UI for better readability
 
 ### 🛠️ Fixes & Updates
 
 - **CarConnectivity-connector-seatcupra** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity-connector-seatcupra.git)
-- **CarConnectivity-connector-skoda** → [v0.7.3](https://github.com/tillsteinbach/CarConnectivity-connector-skoda.git)
-- **CarConnectivity-connector-volkswagen** → [v0.7.3](https://github.com/tillsteinbach/CarConnectivity-connector-volkswagen.git)
-- **CarConnectivity-connector-tronity** → [v0.6.3](https://github.com/tillsteinbach/CarConnectivity-connector-tronity.git)
-- **CarConnectivity** → [v0.7.1](https://github.com/tillsteinbach/CarConnectivity.git)
-- **CarConnectivity-plugin-webui** → [v0.5.1](https://github.com/tillsteinbach/CarConnectivity-plugin-webui.git)
+- **CarConnectivity-connector-skoda** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity-connector-skoda.git)
+- **CarConnectivity-connector-volkswagen** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity-connector-volkswagen.git)
+- **CarConnectivity-connector-tronity** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity-connector-tronity.git)
+- **CarConnectivity-connector-volvo** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity-connector-volvo.git)
+- **CarConnectivity-plugin-mqtt** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity-plugin-mqtt.git)
+- **CarConnectivity-plugin-mqtt_homeassistant** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity-plugin-mqtt_homeassistant.git)
+- **CarConnectivity** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity.git)
+- **CarConnectivity-plugin-webui** → [v0.4.4](https://github.com/tillsteinbach/CarConnectivity-plugin-webui.git)
 
  --- 
 
-## 0.2.12
+
+ ## 0.3.3
+
+
+### 🛠️ Fixes & Updates
+
+- Fix typo in template and add better traces in case of error in config UI
+
+ --- 
+
+ ## 0.3.2
+
+
+### 🚀 New Features
+
+- Use autologin as webui login to disable auth request
+
+ --- 
+
+ ## 0.3.1
+
+
+### 🛠️ Fixes & Updates
+
+- Rework a bit the way Config UI looks like
+
+ --- 
+
+ ## 0.3.0
+
+
+### 🚀 New Features
+
+- Add **CarConnectivity-plugin-abrp** → [v0.6](https://github.com/tillsteinbach/CarConnectivity-plugin-abrp.git)
+
+ --- 
+ 
+ ## 0.2.12
 
 
 ### 🛠️ Fixes & Updates
