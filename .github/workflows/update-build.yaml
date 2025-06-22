@@ -46,13 +46,18 @@ jobs:
               temp_dir=$(mktemp -d)
           
               git clone --bare --quiet "$repo_url" "$temp_dir" >/dev/null 2>&1
-          
+              
+              all_tags=$(git -C "$temp_dir" for-each-ref --sort=-creatordate --format '%(refname:short)' refs/tags)
+              
               if [ "${{ matrix.addon }}" == "carconnectivity-addon" ]; then
-                  latest_version=$(git -C "$temp_dir" for-each-ref --sort=-creatordate --format '%(refname:short)' refs/tags | grep -E '^v?[0-9]+(\.[0-9]+)*$' | head -n 1)
+                  latest_version=$(echo "$all_tags" | grep -E '^v?[0-9]+(\.[0-9]+)*$' | head -n 1)
+                  if [ -z "$latest_version" ]; then
+                      latest_version=$(echo "$all_tags" | head -n 1)
+                  fi
               else
-                  latest_version=$(git -C "$temp_dir" for-each-ref --sort=-creatordate --format '%(refname:short)' refs/tags | head -n 1)
+                  latest_version=$(echo "$all_tags" | head -n 1)
               fi
-          
+                            
               rm -rf "$temp_dir"
               echo "$latest_version"
           }
