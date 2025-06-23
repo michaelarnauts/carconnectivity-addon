@@ -4,6 +4,7 @@
 
 - Add dutch
 - Revoked UI for better readability
+- Includes all new edge features
 
 ### 🛠️ Fixes & Updates
 
@@ -19,7 +20,7 @@
  --- 
 
 
- ## 0.3.3
+ ## 0.3.3 (EDGE only)
 
 
 ### 🛠️ Fixes & Updates
@@ -28,7 +29,7 @@
 
  --- 
 
- ## 0.3.2
+ ## 0.3.2 (EDGE only)
 
 
 ### 🚀 New Features
@@ -37,7 +38,7 @@
 
  --- 
 
- ## 0.3.1
+ ## 0.3.1 (EDGE only)
 
 
 ### 🛠️ Fixes & Updates
@@ -46,7 +47,7 @@
 
  --- 
 
- ## 0.3.0
+ ## 0.3.0 (EDGE only)
 
 
 ### 🚀 New Features
