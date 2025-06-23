@@ -4,6 +4,7 @@
 
 - Add dutch
 - Revoked UI for better readability
+- Includes all new edge features
 
 ### 🛠️ Fixes & Updates
 
@@ -16,11 +17,10 @@
 - **CarConnectivity** → [v0.7.1](https://github.com/tillsteinbach/CarConnectivity.git)
 - **CarConnectivity-plugin-webui** → [v0.5.1](https://github.com/tillsteinbach/CarConnectivity-plugin-webui.git)
 
-
  --- 
 
 
- ## 0.3.3
+ ## 0.3.3 (EDGE only)
 
 
 ### 🛠️ Fixes & Updates
@@ -29,7 +29,7 @@
 
  --- 
 
- ## 0.3.2
+ ## 0.3.2 (EDGE only)
 
 
 ### 🚀 New Features
@@ -38,7 +38,7 @@
 
  --- 
 
- ## 0.3.1
+ ## 0.3.1 (EDGE only)
 
 
 ### 🛠️ Fixes & Updates
@@ -47,7 +47,7 @@
 
  --- 
 
- ## 0.3.0
+ ## 0.3.0 (EDGE only)
 
 
 ### 🚀 New Features
