@@ -1,3 +1,14 @@
+## 0.3.5
+
+
+### 🛠️ Fixes & Updates
+
+- **CarConnectivity-connector-seatcupra** → [v0.4.5](https://github.com/tillsteinbach/CarConnectivity-connector-seatcupra.git)
+- **CarConnectivity-connector-volkswagen** → [v0.8](https://github.com/tillsteinbach/CarConnectivity-connector-volkswagen.git)
+- **CarConnectivity** → [v0.7.2](https://github.com/tillsteinbach/CarConnectivity.git)
+
+ --- 
+
 ## 0.3.4
 
 ### 🚀 New Features
