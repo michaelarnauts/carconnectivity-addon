@@ -1,3 +1,10 @@
+## 0.3.7
+
+
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v18
+
+ --- 
+
 ## 0.3.6
 
 
