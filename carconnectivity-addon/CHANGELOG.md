@@ -1,11 +1,12 @@
 ## 0.3.7
 
 
+- **CarConnectivity-connector-volkswagen** → [v0.8.2](https://github.com/tillsteinbach/CarConnectivity-connector-volkswagen.git)
 - ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v18
 
  --- 
- 
- ## 0.3.6
+
+## 0.3.6
 
 
 ### 🛠️ Fixes & Updates
