@@ -1,4 +1,13 @@
-## 0.3.7
+## 0.3.8
+
+
+### 🛠️ Fixes & Updates
+
+- **CarConnectivity** → [v0.8.0](https://github.com/tillsteinbach/CarConnectivity.git)
+
+ --- 
+ 
+ ## 0.3.7
 
 
 - **CarConnectivity-connector-volkswagen** → [v0.8.2](https://github.com/tillsteinbach/CarConnectivity-connector-volkswagen.git)
