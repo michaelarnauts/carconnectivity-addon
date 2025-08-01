@@ -99,8 +99,8 @@ Vous devez utiliser `MQTT` pour envoyer des données de véhicule à `Home Assis
 Vous pouvez accéder au`Carconnectivity`, l'interface d'origine de l'utilisation directement depuis `Home Assistant`.
 Vous pouvez définir vos propres informations d'accès:
 
--   `Username`: se connecter
--   `Password`: mot de passe
+-   `Username`: admin
+-   `Password`: secret
 
 ![image](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/img/webui.png)
 
