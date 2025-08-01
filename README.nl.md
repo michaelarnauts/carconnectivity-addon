@@ -95,8 +95,8 @@ U moet gebruiken`MQTT`om voertuiggegevens naar te verzenden`Home Assistant`, con
 U hebt toegang tot de`Carconnectivity`'s originele interface van het rechtstreeks gebruik`Home Assistant`.
 U kunt uw eigen toegangsreferenties definiëren:
 
--   `Username`: Login
--   `Password`: wachtwoord
+-   `Username`: admin
+-   `Password`: secret
 
 ![image](https://raw.githubusercontent.com/Pulpyyyy/carconnectivity-addon/refs/heads/main/img/webui.png)
 
