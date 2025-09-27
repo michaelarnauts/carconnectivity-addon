@@ -1,9 +1,9 @@
-name: Force Update Submodules
+name: Update CarConnectivity Submodules
 
 on:
   schedule:
-    - cron: '0 3 * * 1' # chaque lundi à 3h du matin
-  workflow_dispatch: # permet de déclencher manuellement
+    - cron: '0 3 * * 1' # every Monday at 3:00 AM
+  workflow_dispatch: # allows manual trigger
 
 jobs:
   update-submodules:
@@ -13,37 +13,41 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive  # clone tous les sous-modules
+          submodules: recursive  # clone all submodules
 
       - name: Set up Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Force update submodules
+      - name: Update submodules to latest commits
         run: |
-          SUBMODULES=(
-            "CarConnectivity-connector-seatcupra"
-            "CarConnectivity-connector-skoda"
-            "CarConnectivity-connector-tronity"
-            "CarConnectivity-connector-volkswagen"
-            "CarConnectivity-connector-volvo"
-            "CarConnectivity-plugin-abrp"
-            "CarConnectivity-plugin-mqtt"
-            "CarConnectivity-plugin-mqtt_homeassistant"
-            "CarConnectivity-plugin-webui"
-          )
-          
-          for sub in "${SUBMODULES[@]}"; do
-            echo "Updating $sub..."
+          # Define submodules and their branches
+          declare -A SUBMODULES
+          SUBMODULES["CarConnectivity-connector-seatcupra"]="main"
+          SUBMODULES["CarConnectivity-connector-skoda"]="main"
+          SUBMODULES["CarConnectivity-connector-tronity"]="main"
+          SUBMODULES["CarConnectivity-connector-volkswagen"]="main"
+          SUBMODULES["CarConnectivity-connector-volvo"]="main"
+          SUBMODULES["CarConnectivity-plugin-abrp"]="main"
+          SUBMODULES["CarConnectivity-plugin-mqtt"]="main"
+          SUBMODULES["CarConnectivity-plugin-mqtt_homeassistant"]="main"
+          SUBMODULES["CarConnectivity-plugin-webui"]="main"
+
+          # Loop through each submodule and update
+          for sub in "${!SUBMODULES[@]}"; do
+            branch=${SUBMODULES[$sub]}
+            echo "Updating $sub on branch $branch..."
             cd $sub
             git fetch origin
-            git reset --hard origin/main  # remplace 'main' si la branche est différente
+            git checkout $branch
+            git pull origin $branch
             cd -
             git add $sub
           done
 
-          git diff --quiet || git commit -m "Force update all CarConnectivity submodules to latest main"
+          # Commit changes only if there are updates
+          git diff --quiet || git commit -m "Update all CarConnectivity submodules to latest"
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
