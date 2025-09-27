@@ -1,62 +1,42 @@
-name: Update CarConnectivity Submodules
+name: Update Submodules
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 3 * * 1' # every Monday at 3:00 AM
-  workflow_dispatch: # allows manual trigger
+    - cron: '0 0 * * *' # daily at midnight, adjust as needed
 
 jobs:
   update-submodules:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive  # clone all submodules
+    - name: Checkout parent repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0  # required to update submodules and push changes
 
-      - name: Set up Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+    - name: Configure Git
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Update submodules to latest commits
-        run: |
-          # Define submodules and their branches
-          declare -A SUBMODULES
-          SUBMODULES["CarConnectivity-connector-seatcupra"]="main"
-          SUBMODULES["CarConnectivity-connector-skoda"]="main"
-          SUBMODULES["CarConnectivity-connector-tronity"]="main"
-          SUBMODULES["CarConnectivity-connector-volkswagen"]="main"
-          SUBMODULES["CarConnectivity-connector-volvo"]="main"
-          SUBMODULES["CarConnectivity-plugin-abrp"]="main"
-          SUBMODULES["CarConnectivity-plugin-mqtt"]="main"
-          SUBMODULES["CarConnectivity-plugin-mqtt_homeassistant"]="main"
-          SUBMODULES["CarConnectivity-plugin-webui"]="main"
+    - name: Update submodules to latest main
+      run: |
+        # Loop through all submodules and update to their main branch
+        git submodule foreach --recursive '
+          git fetch origin main
+          git checkout main
+          git pull origin main
+        '
 
-          # Loop through each submodule and update
-          for sub in "${!SUBMODULES[@]}"; do
-            branch=${SUBMODULES[$sub]}
-            echo "Updating $sub on branch $branch..."
-            cd $sub
-            git fetch origin
-            git checkout $branch
-            git pull origin $branch
-            cd -
-            git add $sub
-          done
-
-          # Commit changes only if there are updates
-          git diff --quiet || git commit -m "Update all CarConnectivity submodules to latest"
-
-      - name: Ensure main branch and sync with remote
-        run: |
-          git fetch origin
-          git checkout main || git checkout -b main
-          git merge --ff-only origin/main || git merge --allow-unrelated-histories origin/main
-
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true  # ensures push succeeds even if remote has diverged
+    - name: Commit updated submodules if any
+      run: |
+        # Check if any submodules were updated
+        if ! git diff --quiet; then
+          git add .
+          git commit -m "Update submodules to latest main"
+          git push origin main
+        else
+          echo "No submodule updates"
+        fi
