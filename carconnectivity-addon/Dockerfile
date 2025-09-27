@@ -5,6 +5,7 @@ ARG BUILD_ARCH
 ARG BUILD_DESCRIPTION
 ARG BUILD_NAME
 ARG BUILD_VERSION
+ARG AUDI_VERSION
 ARG SEAT_VERSION
 ARG SKODA_VERSION
 ARG VW_VERSION
@@ -20,11 +21,12 @@ COPY rootfs /
 WORKDIR /tmp/
 
 RUN echo "ADDON_VERSION=v${BUILD_VERSION}" >> versions.txt && \
-    apk add --no-cache curl nginx py3-pip build-base libffi-dev && \
+    apk add --no-cache curl nginx py3-pip build-base libffi-dev git && \
     python3 -m venv /opt/venv && \
     /opt/venv/bin/pip install --upgrade pip && \
     /opt/venv/bin/pip install --no-cache \
         carconnectivity==${CC_VERSION} \
+        git+https://github.com/acfischer42/CarConnectivity-connector-audi.git@${AUDI_VERSION} \
         carconnectivity-connector-seatcupra==${SEAT_VERSION} \
         carconnectivity-connector-skoda==${SKODA_VERSION} \
         carconnectivity-connector-volkswagen==${VW_VERSION} \
@@ -32,7 +34,7 @@ RUN echo "ADDON_VERSION=v${BUILD_VERSION}" >> versions.txt && \
         carconnectivity-plugin-abrp==${ABRP_VERSION} \
         carconnectivity-plugin-webui==${WEBUI_VERSION} \
         carconnectivity-plugin-mqtt_homeassistant==${MQTTHA_VERSION} && \
-    apk del build-base libffi-dev && \
+    apk del build-base libffi-dev git && \
     echo "CARCONNECTIVITY_VERSION=${CC_VERSION}" >> versions.txt && \
     echo "AUDI_VERSION=${AUDI_VERSION}" >> versions.txt && \
     echo "SEAT_VERSION=${SEAT_VERSION}" >> versions.txt && \
