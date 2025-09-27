@@ -1,3 +1,13 @@
+ --- 
+
+## 0.4.0
+
+### 🚀 New Features
+
+- Add audi support, thanks @acfischer42
+
+ ---
+
 ## 0.3.10
 
 
