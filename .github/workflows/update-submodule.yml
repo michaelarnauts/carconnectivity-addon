@@ -1,0 +1,32 @@
+name: Update Submodules
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # chaque lundi à 3h du matin
+  workflow_dispatch: # permet de déclencher manuellement
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive  # clone tous les sous-modules
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Update all submodules
+        run: |
+          git submodule update --remote --merge
+          git add .
+          git diff --quiet || git commit -m "Update all CarConnectivity connectors and plugins"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
