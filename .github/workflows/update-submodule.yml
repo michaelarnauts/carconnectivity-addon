@@ -1,4 +1,4 @@
-name: Update Submodules
+name: Force Update Submodules
 
 on:
   schedule:
@@ -20,12 +20,31 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Update all submodules
+      - name: Force update submodules
         run: |
-          git submodule update --remote --merge
-          git add .
-          git diff --quiet || git commit -m "Update all CarConnectivity connectors and plugins"
+          SUBMODULES=(
+            "CarConnectivity-connector-seatcupra"
+            "CarConnectivity-connector-skoda"
+            "CarConnectivity-connector-tronity"
+            "CarConnectivity-connector-volkswagen"
+            "CarConnectivity-connector-volvo"
+            "CarConnectivity-plugin-abrp"
+            "CarConnectivity-plugin-mqtt"
+            "CarConnectivity-plugin-mqtt_homeassistant"
+            "CarConnectivity-plugin-webui"
+          )
           
+          for sub in "${SUBMODULES[@]}"; do
+            echo "Updating $sub..."
+            cd $sub
+            git fetch origin
+            git reset --hard origin/main  # remplace 'main' si la branche est différente
+            cd -
+            git add $sub
+          done
+
+          git diff --quiet || git commit -m "Force update all CarConnectivity submodules to latest main"
+
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
